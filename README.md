@@ -1,4 +1,4 @@
-# Self-Supervised Graph Representation Learning via Exploring Complex Linking Semantics
+# Self-Supervised Graph Representation Learning via Exploring Complex Linking Semantic
 
 <p align="center">
   <img width="90%" src="Figs/framework.png" />
