@@ -1,0 +1,1 @@
+python main.py -dataset wisconsin -adj_dropout 0.7 -alpha 0.2 -dropout 0.7 -k 20 -lr 0.005 -p 0.5 -use_bn_g True -use_bn_m True -wd 0 -gpu_id 2 "$@"

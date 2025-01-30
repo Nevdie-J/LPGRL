@@ -1,0 +1,1 @@
+python main.py -dataset cora -adj_dropout 0.7 -alpha 0.6 -dropout 0.5 -k 25 -lr 0.001 -p 0.4 -use_bn_g True -use_bn_m False -wd 0.00001 "$@"

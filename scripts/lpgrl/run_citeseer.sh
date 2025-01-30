@@ -1,0 +1,1 @@
+python main.py -dataset citeseer -adj_dropout 0.5 -alpha 0.6 -dropout 0.7 -k 30 -lr 0.005 -p 0.3 -wd 0.00005 "$@"

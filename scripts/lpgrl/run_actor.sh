@@ -1,0 +1,1 @@
+python main.py -dataset actor -adj_dropout 0.7 -alpha 0.4 -dropout 0.7 -k 10 -lr 0.001 -p 0.6 -use_bn_g true -use_bn_m true -wd 0.00005 "$@"

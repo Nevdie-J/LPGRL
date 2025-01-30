@@ -1,0 +1,1 @@
+python main.py -dataset blogcatalog -adj_dropout 0.3 -alpha 0.2 -dropout 0.7 -k 30 -lr 0.01 -p 0.6 -use_bn_g false -use_bn_m true -wd 0.00005 "$@"

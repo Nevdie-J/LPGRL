@@ -1,0 +1,1 @@
+python main.py -dataset squirrel-filtered -gpu_id 2 -use_bn_g true -use_bn_m true "$@"

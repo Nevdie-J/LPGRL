@@ -1,0 +1,1 @@
+python main.py -dataset texas -adj_dropout 0.5 -alpha 0.2 -dropout 0.3 -k 20 -lr 0.005 -p 0.5 -use_bn_g False -use_bn_m True -wd 0 -gpu_id 0 "$@"

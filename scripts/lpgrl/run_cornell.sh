@@ -1,0 +1,1 @@
+python main.py -dataset cornell -adj_dropout 0.5 -alpha 0.2 -dropout 0.6 -k 20 -lr 0.005 -p 0.6 -use_bn_g True -use_bn_m True -wd 0.00005 "$@"

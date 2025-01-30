@@ -1,0 +1,1 @@
+python main.py -dataset pubmed -adj_dropout 0.7 -alpha 0.6 -dropout 0.3 -k 10 -lr 0.005 -p 0.6 -use_bn_g False -use_bn_m True -wd 0.00001 "$@"
