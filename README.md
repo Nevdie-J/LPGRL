@@ -1,5 +1,9 @@
 # Self-Supervised Graph Representation Learning via Exploring Complex Linking Semantics
 
+<p align="center">
+  <img width="90%" src="Figs/framework.png" />
+</p>
+
 # Requirements
 
 + CUDA 11.1
