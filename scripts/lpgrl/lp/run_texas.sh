@@ -1,1 +1,0 @@
-python main.py -dataset texas -adj_dropout 0.3 -alpha 0.8 -dropout 0.3 -k 30 -lr 0.001 -p 0.6 -use_bn_g True -use_bn_m True -wd 0 -task link_prediction "$@"

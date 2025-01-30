@@ -1,1 +1,0 @@
-python main.py -dataset cora -gpu_id 0 -adj_dropout 0.3 -alpha 0.2 -dropout 0.7 -k 20 -lr 0.001 -p 0.7 -use_bn_m True -use_bn_g True -wd 0.00005 -task link_prediction "$@"
