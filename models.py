@@ -235,11 +235,10 @@ class LPGRL(nn.Module):
         self.proj_head_p = nn.Sequential(nn.Linear(out_dim, out_dim))
         
 
-    def set_mask_knn(self, x, edge_index, k, name, metric='cosine', use_lsh=False):
+     def set_mask_knn(self, x, edge_index, k, name, metric='cosine', use_lsh=False):
         if k != 0:
             path = f'./data/knn'
             file_name = path + f'/{name}_{k}.npz'
-            
             if os.path.exists(file_name):
                 knn = sp.load_npz(file_name)
             else:
@@ -247,17 +246,13 @@ class LPGRL(nn.Module):
                     lshf = LSHForest()
                     lshf.fit(x.cpu().detach().numpy()) 
                     knn = lshf.kneighbors_graph(x.cpu().detach().numpy(), k, mode='distance')
-                    knn = knn.toarray() 
+                    knn = knn.toarray()
                 else:
                     knn = kneighbors_graph(x.cpu().detach().numpy(), k, metric=metric)
-                    knn = knn.toarray()
-
-                sp.save_npz(file_name, sp.csr_matrix(knn))
-
-            knn = torch.tensor(knn) + torch.eye(x.shape[0]) 
+                    sp.save_npz(file_name, knn)
+            knn = torch.tensor(knn.toarray()) + torch.eye(x.shape[0])
         else:
-            knn = torch.eye(x.shape[0]) 
-
+            knn = torch.eye(x.shape[0])
         self.pos_mask = knn
         self.neg_mask = 1 - self.pos_mask
         self.edge_pos_mask = to_dense_adj(edge_index, max_num_nodes=x.shape[0]).squeeze()
